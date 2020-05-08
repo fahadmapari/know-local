@@ -1,0 +1,103 @@
+body {
+  background-color: #000;
+}
+
+#landing-header {
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  padding-top: 40vh;
+}
+
+.landing-button {
+  border: 1px solid white;
+  color: white;
+}
+
+.landing-button:hover,
+.landing-button:active,
+.landing-button:visited,
+.landing-button:focus {
+  border: 1px solid white;
+  background: white;
+}
+
+#landing-header h1 {
+  color: #fff;
+  padding: 10px;
+  margin: 8px;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.slideshow {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.slideshow li {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 50s linear infinite;
+}
+
+.slideshow li:nth-child(1) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+    url("https://pro2-bar-s3-cdn-cf6.myportfolio.com/7110bd9a9c83d97ed90b4758be565c85/7cf65034-0bca-420c-a47b-dbf276a82c66_rw_1920.jpg?h=950959047a23106dea7d062e47d92ee7");
+}
+.slideshow li:nth-child(2) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+    url("http://www.visittnt.com/blog/wp-content/uploads/2018/07/Mumbai.jpg");
+  animation-delay: 10s;
+}
+.slideshow li:nth-child(3) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+    url("https://lonelyplanetimages.imgix.net/a/g/hi/t/b73afdaab39ce10f95df639020905660-marine-drive.jpg");
+  animation-delay: 20s;
+}
+.slideshow li:nth-child(4) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+    url("https://www.rajasthantourpackage.co/wp-content/uploads/2017/05/jodhpur-jaswant-thada-rajasthan-india-e1495033671215-1024x614.jpg");
+  animation-delay: 30s;
+}
+.slideshow li:nth-child(5) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+    url("https://www.travelvina.com/wp-content/uploads/2017/07/Travel-around-India-on-local-transport-post.jpg");
+  animation-delay: 40s;
+}
+
+@keyframes imageAnimation {
+  0% {
+    opacity: 0;
+    animation-timing-function: ease-in;
+  }
+  10% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  20% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+}
+
+/* Older browser support - .no-cssanimations class added by modernizr */
+.no-cssanimations .slideshow li {
+  opacity: 1;
+}
