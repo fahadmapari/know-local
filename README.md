@@ -1,4 +1,4 @@
-## camping-website ##
+## KnowLocal ##
 - Node.js
 - Express
 - Mongodb
